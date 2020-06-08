@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--引入头部top栏-->
+<div th:include="include::header"></div>
+<!--中间内容栏-->
+<div class="layui-card layui-form" lay-filter="component-form-element">
+    <div class="layui-card-header">
+        信息编辑
+    </div>
+    <br>
+    <div class="layui-card-body layui-row">
+        <form method="post" role="form" id="editForm">
+			<div class="layui-form-item layui-col-md5">
+                <label class="layui-form-label">输入编辑信息: </label>
+                <div class="layui-input-block">
+                    <input type="text" id="inputStr" name="inputStr" th:value="${responseBO.inputStr}"
+                           placeholder="请输入编辑信息" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-col-md5 layui-col-lg-offset1">
+                <div class="layui-btn-container">
+                    <button class="layui-btn submit" type="button">提交</button>
+                    <button class="layui-btn layui-btn-normal" type="reset">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--  引入底部 -->
+<div th:include="include::footer"></div>
+<script>
+    layui.config({
+        base: base_url+'/js/view/demo/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('edit'); //加载入口
+
+</script>

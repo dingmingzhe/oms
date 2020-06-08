@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--引入头部top栏-->
+<div th:include="include::header"></div>
+<!--中间内容栏-->
+<div class="layui-card layui-form" lay-filter="component-form-element">
+    <div class="layui-card-header">
+        新增信息
+    </div>
+    <br/>
+    <div class="layui-card-body layui-row">
+        <form method="post" id="addForm">          
+            <div class="layui-form-item layui-col-md12">
+                <label class="layui-form-label">输入字符信息: </label>
+                <div class="layui-input-block">
+                    <input type="text" id="inputStr" name="inputStr" required="required"
+                           placeholder="输入字符信息" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-col-md5 layui-col-lg-offset1">
+                <div class="layui-btn-container">
+                    <button class="layui-btn submit" type="button">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!--  引入底部 -->
+<div th:include="include::footer"></div>
+<script>
+    layui.config({
+        base: base_url+'/js/view/demo/'
+    }).use('add'); //加载入口
+</script>

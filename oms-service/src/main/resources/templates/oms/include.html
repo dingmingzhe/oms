@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div th:fragment="header">
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <link rel="stylesheet" href="static/js/plugins/layui-v2.5.4/css/admin.css" media="all"/>
+        <link rel="stylesheet" href="static/js/plugins/layui-v2.5.4/css/layui.css" media="all"/>
+        <link rel="stylesheet" href="static/font/font-awesome-4.5.0/css/font-awesome.min.css" media="all"/>
+        <link rel="stylesheet" href="static/css/common.css"/>
+
+    </head>
+</div>
+<div th:fragment="copyright">
+
+</div>
+<div th:fragment="footer">
+    <script type="text/javascript" src="static/js/url-1.0.js"></script>
+    <!--<script th:src="|/${BASE}/js/plugins/layui-2.3.0/layui.js|"></script>-->
+    <script src="static/js/plugins/layui-v2.5.4/layui.js"></script>
+    <script src="static/js/plugins/layui-v2.5.4/formSelects-v4.js"></script>
+    <script src="static/js/plugins/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="static/js/plugins/jquery-validate-1.17.0/jquery.validate.js"></script>
+    <script src="static/js/plugins/jquery-validate-1.17.0/validate.bootstrap.js"></script>
+    <script src="static/js/plugins/jquery-plugins/jquery.md5.js"></script>
+
+    <script src="static/js/common-1.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            ad.init;
+        });
+    </script>
+</div>
+
+
+</body>
+</html>

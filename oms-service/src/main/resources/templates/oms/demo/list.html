@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<!--引入头部top栏-->
+<div th:include="include::header"></div>
+<!--中间内容栏-->
+<div class="layui-card">
+    <div class="layui-card-header cu-card-header">
+        <form class="layui-form" id="doctorForm">
+            <input type="hidden" name="id"/>
+
+            <button  id="btn_add" type="button"
+                    class="layui-btn layui-col-lg-offset1  layui-col-md1 cu-card-form-item">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+            </button>          
+        </form>
+    </div>
+    <div class="layui-card-body">
+        <table id="id" lay-filter="demoTable"></table>
+    </div>
+    <div class="copyTarget" style="opacity: 0;"></div>  <!--隐藏目标对象-->
+    <div id="qrcode" class="md-qrcode-img md-center" style="display:none;"></div>
+</div>
+<!--  引入底部 -->
+<div th:include="include::footer"></div>
+<script type="text/html" id="detail" >
+    <a  class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+ </script>
+
+<script>
+    layui.config({
+        base: base_url+'/js/view/demo/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('list'); //加载入口
+</script>

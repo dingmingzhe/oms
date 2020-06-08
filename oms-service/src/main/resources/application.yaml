@@ -1,0 +1,28 @@
+server:
+  port: 19080
+  servlet:
+    context-path: /oms
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+    uri-encoding: UTF-8
+    max-threads: 200
+    max-connections: 10000
+  use-forward-headers: true
+spring:
+  profiles:
+    active: dev  
+  thymeleaf:
+    prefix: classpath:/templates/oms/
+    cache: false
+  mvc:
+    static-path-pattern: /oms/**
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/, classpath:/static/, classpath:/public/
+
+
+
+
+  
+
+

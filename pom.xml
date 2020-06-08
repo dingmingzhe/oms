@@ -29,7 +29,7 @@
         <druid-spring-boot-starter.version>1.1.9</druid-spring-boot-starter.version>
         <collections.version>3.2.1</collections.version>
         <hibernate.validator.version>6.0.4.Final</hibernate.validator.version>
-        <fastjson.version>1.1.41</fastjson.version>
+        <fastjson.version>1.2.25.sec10</fastjson.version>
         <thymeleaf.security.version>3.0.2.RELEASE</thymeleaf.security.version>
     </properties>
 
